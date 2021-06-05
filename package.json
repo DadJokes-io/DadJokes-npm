@@ -1,6 +1,6 @@
 {
-  "name": "@dadjokes.io/dad-jokes",
-  "version": "0.0.1",
+  "name": "@DadJokes.io/dad-jokes",
+  "version": "1.0.0",
   "description": "A npm wrapper for the dadjokes.io api",
   "main": "index.js",
   "scripts": {
