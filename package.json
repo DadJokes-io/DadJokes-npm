@@ -1,5 +1,5 @@
 {
-  "name": "@DadJokes.io/dad-jokes",
+  "name": "@DadJokes-io/dad-jokes",
   "version": "1.0.0",
   "description": "A npm wrapper for the dadjokes.io api",
   "main": "index.js",
@@ -12,8 +12,6 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags",
     "dev": "nodemon --config nodemon.json src/index.ts",
     "dev:debug": "nodemon --config nodemon.json --inspect-brk src/index.ts"
   },
