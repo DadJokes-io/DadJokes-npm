@@ -1,5 +1,5 @@
 {
-  "name": "@DadJokes-io/dad-jokes",
+  "name": "@dadjokes-io/dad-jokes",
   "version": "1.0.0",
   "description": "A npm wrapper for the dadjokes.io api",
   "main": "index.js",
