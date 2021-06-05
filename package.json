@@ -1,12 +1,13 @@
 {
-  "name": "dad-jokes",
+  "name": "@dadjokes.io/dad-jokes",
   "version": "1.0.0",
-  "description": "A npm wrapper for the dadjokes.io apie",
+  "description": "A npm wrapper for the dadjokes.io api",
   "main": "index.js",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "test:coverage": "jest --config jestconfig.json --collect-coverage",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
@@ -24,7 +25,7 @@
     "Funny",
     "API"
   ],
-  "author": "Kegen Guyll",
+  "author": "DadJokes.io",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DadJokes-io/DadJokes-npm/issues"
@@ -32,6 +33,7 @@
   "homepage": "https://github.com/DadJokes-io/DadJokes-npm#readme",
   "devDependencies": {
     "@types/jest": "^26.0.23",
+    "coveralls": "^3.1.0",
     "jest": "^27.0.4",
     "prettier": "^2.3.1",
     "ts-jest": "^27.0.2",
@@ -41,5 +43,9 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "types": "lib/index.d.ts"
 }
