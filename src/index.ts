@@ -4,10 +4,10 @@ import { Joke, JokeResponse, JokeResponseArray } from './models/joke';
 class DadJokes {
   config: AxiosRequestConfig;
   axios: AxiosStatic;
-  constructor(private rapidapi_key: string) {
+  constructor(private RAPIDAPIKEY: string) {
     this.config = {
       headers: {
-        'x-rapidapi-key': this.rapidapi_key,
+        'x-rapidapi-key': this.RAPIDAPIKEY,
         'x-rapidapi-host': 'dad-jokes.p.rapidapi.com',
       },
     };
@@ -15,18 +15,14 @@ class DadJokes {
   }
 
   get authToken(): string {
-    return this.rapidapi_key;
+    return this.RAPIDAPIKEY;
   }
 
   set authToken(newAuthToken: string) {
-    this.rapidapi_key = newAuthToken;
+    this.RAPIDAPIKEY = newAuthToken;
   }
 
   async randomJokes(count?: number): Promise<Joke[]> {
-    if (count && count > 5) {
-      console.warn('Count limit for random jokes is 5');
-    }
-
     try {
       const response: AxiosResponse<JokeResponseArray> = await this.axios.get(
         `https://dad-jokes.p.rapidapi.com/random/joke?count=${count || 1}`,

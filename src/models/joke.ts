@@ -1,6 +1,6 @@
 export type JokeResponseArray = {
   success: boolean;
-  body: Array<Joke>;
+  body: Joke[];
 };
 
 export type Joke = {
