@@ -47,9 +47,7 @@
     "lib/**/*"
   ],
   "publishConfig": {
-    "access": "public",
-    "cache": "~/.npm",
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "types": "lib/index.d.ts",
   "restartable": "rs",
