@@ -1,6 +1,6 @@
 {
   "name": "@dadjokes.io/dad-jokes",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A npm wrapper for the dadjokes.io api",
   "main": "index.js",
   "scripts": {
@@ -49,7 +49,9 @@
     "lib/**/*"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "cache": "~/.npm",
+    "registry": "https://npm.pkg.github.com"
   },
   "types": "lib/index.d.ts",
   "restartable": "rs",
